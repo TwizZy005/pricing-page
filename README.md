@@ -6,6 +6,7 @@ A clean and responsive pricing page built using **HTML** and **CSS** only. This 
 
 ## ![landing-page](https://github.com/user-attachments/assets/797c0e4c-654b-4934-9985-30a8748b41dc)
 ![landing-page2](https://github.com/user-attachments/assets/f16f1e02-5b80-4f0a-a013-6f34cad1cdfb)
+![landing-page3](https://github.com/user-attachments/assets/9f7995b9-6409-4926-b02f-039af74fb4ae)
 
 🚀 Features
 
