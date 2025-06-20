@@ -1,0 +1,564 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background: linear-gradient(49deg, #5d108a 40%, #db8eff, #4f0c69);
+    margin-top: 80px;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    grid-template-columns: repeat(1, 1fr);
+    flex-direction: column;
+    min-height: 200vh;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    min-height: 80vh;
+    padding-top: 3rem;
+    padding-bottom: 9rem;
+    box-shadow: 0px 4px 23px rgba(0, 0, 0, 1);
+    border-radius: 2rem;
+    background: white;
+}
+
+.container h1{
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 2rem 0;
+}
+
+.switch-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.switch-container #monthly{
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    color: rgb(15, 6, 53);
+}
+
+.switch-container #annually{
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    color: rgb(15, 6, 53);
+}
+
+.container .switch{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.container .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #591586;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #591586;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+}
+
+.pricing-cards{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 2rem;
+    flex-wrap: wrap;
+    align-items: baseline;
+    align-items: center;
+}
+
+.card1{
+    position: relative;
+    width: 300px;
+    height: 420px;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 20px;
+    z-index: 1;
+    border: 2px solid #ffffff;
+}
+
+.card1:hover{
+    background: linear-gradient(45deg, #c3f8ff 10%, #08e2f1 50%, #86b4f0 90%);
+    transition: all .70s ease;
+}
+
+.card1 h2{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: rgb(15, 6, 53);
+}
+
+.card1 p{
+    font-size: 1rem;
+    color: rgb(15, 6, 53);
+}
+
+.card1 ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-align: start;
+    padding-bottom: 1px;
+    margin: 2em;
+    color: rgb(15, 6, 53);
+    line-height: 1.5;
+}
+
+.card1 ul li{
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: middle;
+}
+
+.card1 ul li i{
+    padding-right: 0.5rem;
+}
+
+.vertical-line{
+    display: block;
+    position: flex;
+    width: 0.1px;
+    height: 400px;
+    border: 1px solid #000000;
+    background-color: #000000;
+}
+
+.card2{
+    position: relative;
+    width: 300px;
+    height: 420px;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 20px;
+    z-index: 1;
+    border: 2px solid #ffffff;
+}
+
+.card2:hover{
+    background: linear-gradient(45deg, #ddda13 10%, #da7e15 50%, #9ea807 90%);
+    transition: all .70s ease;
+}
+
+.card2 h2{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: rgb(15, 6, 53);
+}
+
+.card2 p{
+    font-size: 1rem;
+    color: rgb(15, 6, 53);
+}
+
+.card2 ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    text-align: start;
+    margin: 2em;
+    color: rgb(15, 6, 53);
+    padding-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.card2 ul li{
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: middle;
+}
+
+.card2 ul li i{
+    padding-right: 0.5rem;
+}
+
+.vertical-line2{
+    display: block;
+    position: flex;
+    width: 0.1px;
+    height: 400px;
+    border: 1px solid #000000;
+    background-color: #000000;
+}
+
+.card3{
+    position: relative;
+    width: 350px;
+    height: 450px;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 20px;
+    z-index: 1;
+    overflow: hidden;
+    box-shadow: 1px 2px 10px 5px rgb(48, 50, 51);
+}
+
+.card3::before{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(38deg, rgb(255, 103, 250), rgb(83, 17, 138), rgb(176, 95, 223), rgb(93, 9, 172) 40%, rgb(139, 23, 248), indigo, rgb(75, 13, 104), rgb(70, 3, 124));
+    z-index: -1;
+    background-size: 400% 400%;
+    animation: animateBorder 18s infinite;
+}
+
+.card3::after{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background: #ffffff;
+    border-radius: 18px;
+    z-index: -4;
+}
+
+.card3 h2{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: rgb(255, 255, 255);
+}
+
+.card3 p{
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+}
+
+.card3 ul{
+    list-style: none;
+    text-align: start;
+    padding: 0;
+    margin: 2em;
+    color: rgb(255, 255, 255);
+    padding-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.card3 ul li{
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: middle;
+}
+
+.card3 ul li i{
+    padding-right: 0.5rem;
+}
+
+.popup-form {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.5);
+    justify-content: center; align-items: center;
+}
+.popup-content {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    position: relative;
+    min-width: 300px;
+}
+
+/* Show each popup when its checkbox is checked */
+#popup-toggle1:checked ~ #popup-form1,
+#popup-toggle2:checked ~ #popup-form2,
+#popup-toggle3:checked ~ #popup-form3 {
+    display: flex;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.open-form-btn {
+    display: inline-block;
+    padding: 5px 20px;
+    background: #000000;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.open-form-btn3 {
+    display: inline-block;
+    padding: 5px 20px;
+    background: #ffffff;
+    color: #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.popup-form form {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+}
+
+.popup-form form input[type="text"],
+.popup-form form input[type="email"] {
+    padding: 10px;
+    margin-bottom: 2px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.pricing-cards #premium{
+    background-color: rgb(255, 255, 255);
+    color: rgb(15, 6, 53);
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.pricing-cards #premium:hover{
+    background-color: rgb(15, 6, 53);
+    color: white;
+    border: none;
+}
+
+.card1:hover,
+.card2:hover,
+.card3:hover{
+    transform: translateY(-10px);
+    transition: all .70s ease;
+}
+
+.container2{
+    width: 90%;
+    margin: auto;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    min-height: 80vh;
+    background: transparent;
+    display: flex;
+    padding-top: 2rem;
+}
+
+.box{
+    justify-content: center;
+    padding-top: 2rem;
+    flex-wrap: wrap;
+    align-items: baseline;
+    align-items: center;
+    box-shadow: 0px 4px 23px rgba(0, 0, 0, 1);
+    border-radius: 2rem;
+    background: white
+}
+
+.box thead{
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.box tr{
+    width: 100%;
+}
+
+.table-header{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    background-color: #f3f4f6;
+    border-radius: 10px;
+}
+
+.table-body{
+    flex-direction: column;
+    width: 100%;
+}
+
+
+@keyframes animateBorder {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media (max-width: 820px) and (min-height: 1180px) {
+    .vertical-line{
+        border: 1px solid #ffffff;
+        background-color: #ffffff;
+    } 
+    .vertical-line2{
+        border: 1px solid #ffffff;
+        background-color: #ffffff;
+    }
+    .pricing-cards{
+        flex-direction: wrap;
+        align-items: center;
+        padding-left: 1.5rem;
+    }
+}
+
+@media (max-width: 1180px) and (min-height: 820px) {
+    body {
+        margin-top: 50px;
+        min-height: 170vh;}
+    .vertical-line{
+        border: 1px solid #ffffff;
+        background-color: #ffffff;
+    } 
+    .vertical-line2{
+        border: 1px solid #ffffff;
+        background-color: #ffffff;
+    }
+    .pricing-cards{
+        flex-direction: wrap;
+        align-items: center;
+        padding-left: 1.5rem;
+    }
+}
+
+@media (max-width: 390px) and (min-height: 844px) {
+    .vertical-line{
+        display: none;
+    } 
+    .vertical-line2{
+        display: none;
+    }
+    .pricing-cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        gap: 1rem;
+    }
+    .card1, .card2, .card3 {
+        width: 90%;
+        height: auto;
+        padding: 1rem;
+    }
+    .container{
+        width: 100%;
+        padding: 1rem;
+    }
+    .container h1{
+        font-size: 2rem;
+        margin: 1rem 0;
+    }   
+    .switch-container{
+        margin-bottom: 1rem;
+    }
+    .switch-container #monthly,
+    .switch-container #annually{
+        font-size: 1rem;
+    }
+    .switch-container .switch{
+        width: 50px;
+        height: 28px;
+    }
+    .switch-container .slider {
+        border-radius: 28px;
+    }
+    .switch-container .slider:before {
+        height: 22px;
+        width: 22px;
+        left: 3px;
+        bottom: 3px;
+    }
+    .card1, .card2, .card3 {
+        width: 90%;
+        height: auto;
+        padding: 1rem;
+    }
+    .card1 h2, .card2 h2, .card3 h2 {
+        font-size: 1.5rem;
+    }
+    .card1 p, .card2 p, .card3 p {
+        font-size: 0.9rem;
+    }
+    .container2 {
+        display: none;
+    }
+    .box {
+        display: none;
+    }
+    .popup-form {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+    }
+}
